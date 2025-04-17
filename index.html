@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ryo Yoshida - プロフィール</title>
+<script src="https://cdn.tailwindcss.com/3.4.16"></script>
+<script>tailwind.config={theme:{extend:{colors:{primary:'#2B3A67',secondary:'#5D8CAE'},borderRadius:{'none':'0px','sm':'4px',DEFAULT:'8px','md':'12px','lg':'16px','xl':'20px','2xl':'24px','3xl':'32px','full':'9999px','button':'8px'}}}}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Roboto+Mono&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet">
+<style>
+:where([class^="ri-"])::before { content: "\f3c2"; }
+body {
+font-family: 'Noto Sans JP', sans-serif;
+background-color: #FFFFFF;
+color: #333333;
+}
+.tech-tag {
+font-family: 'Roboto Mono', monospace;
+}
+.profile-card {
+box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.profile-card:hover {
+transform: translateY(-5px);
+box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+.social-icon {
+transition: transform 0.2s ease, color 0.2s ease;
+}
+.social-icon:hover {
+transform: translateY(-3px);
+color: #2B3A67;
+}
+.project-card {
+transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.project-card:hover {
+transform: translateY(-5px);
+box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+input[type="checkbox"] {
+appearance: none;
+-webkit-appearance: none;
+height: 1.5rem;
+width: 1.5rem;
+border: 2px solid #2B3A67;
+border-radius: 4px;
+display: inline-flex;
+align-items: center;
+justify-content: center;
+cursor: pointer;
+}
+input[type="checkbox"]:checked {
+background-color: #2B3A67;
+position: relative;
+}
+input[type="checkbox"]:checked::after {
+content: "✓";
+color: white;
+position: absolute;
+font-size: 1rem;
+}
+</style>
+</head>
+<body>
+<div class="min-h-screen flex flex-col items-center justify-center p-6">
+<div class="max-w-4xl w-full bg-white rounded-lg overflow-hidden profile-card">
+<!-- プロフィールセクション -->
+<div class="flex flex-col items-center py-12 px-6 bg-gradient-to-b from-gray-50 to-white">
+<div class="w-32 h-32 rounded-full overflow-hidden mb-6 border-4 border-white shadow-lg">
+<img src="https://profile.wolfapplication.com/profile.png" alt="Ryo Yoshida" class="w-full h-full object-cover object-top">
+</div>
+<h1 class="text-3xl font-bold mb-2">吉田 涼</h1>
+<p class="text-lg text-gray-600 mb-6 text-center max-w-lg">あなたの技術パートナー<br>2児の父/海沿いの生活/釣り/園芸/狩猟</p>
+
+<a href="https://x.com/wazgo" target="_blank" class="bg-black hover:bg-gray-900 text-white px-8 py-3 rounded-button font-medium transition-all whitespace-nowrap flex items-center gap-2 mb-6">
+<i class="ri-twitter-x-line ri-lg"></i>
+<span>@wazgo</span>
+</a>
+
+<!-- SNSリンク -->
+<div class="flex space-x-6 mb-8">
+<a href="https://facebook.com/ryo.yoshida" target="_blank" class="social-icon w-12 h-12 flex items-center justify-center text-gray-600 hover:text-primary">
+<i class="ri-facebook-fill ri-xl"></i>
+</a>
+<a href="https://note.com/wazgo" target="_blank" class="social-icon w-12 h-12 flex items-center justify-center text-gray-600 hover:text-primary">
+  <svg width="493" height="493" viewBox="0 0 493 493" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <rect x="1" y="1" width="490.2" height="490.2" rx="104" fill="white"/>
+    <path d="M139.2 141.7C180.4 141.7 236.8 139.6 277.3 140.7C331.6 142.1 352.1 165.8 352.8 224.2C353.5 257.3 352.8 351.9 352.8 351.9H294C294 269.1 294.3 255.4 294 229.3C293.3 206.3 286.8 195.4 269.1 193.3C250.4 191.2 198 193 198 193V352H139.2V141.7Z" fill="#040000"/>
+    <rect x="1" y="1" width="490.2" height="490.2" rx="104" stroke="#EBEBEB" stroke-width="2"/>
+  </svg>
+</a>
+<a href="https://instagram.com/wazgo" target="_blank" class="social-icon w-12 h-12 flex items-center justify-center text-gray-600 hover:text-primary">
+<i class="ri-instagram-fill ri-xl"></i>
+</a>
+</div>
+</div>
+<!-- 現在のフォーカス -->
+<h2 class="text-2xl font-bold mb-6 text-center">現在のフォーカス</h2>
+<div class="py-10 px-8 bg-white">
+<div class="bg-gray-50 rounded-lg p-6 flex items-center justify-center mb-10">
+<div class="flex flex-col md:flex-row items-center gap-6">
+<div class="w-16 h-16 flex items-center justify-center bg-primary bg-opacity-10 rounded-full">
+<i class="ri-ai-generate-2 ri-2x text-primary"></i>
+</div>
+<div>
+<h3 class="text-xl font-bold text-primary mb-2">AI駆動開発</h3>
+<p class="text-gray-600">0→1→10→100の各フェーズにおいてAI駆動での開発手法の確立に挑戦中</p>
+</div>
+</div>
+</div>
+<!-- 最近のプロジェクト -->
+<h2 class="text-2xl font-bold mb-6 text-center">最近のプロジェクト</h2>
+<div class="grid md:grid-cols-2 gap-6">
+<!-- プロジェクト1 -->
+<div class="project-card bg-white border border-gray-100 rounded-lg p-6 shadow-sm">
+<div class="flex items-center mb-4">
+<div class="w-10 h-10 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mr-3">
+<i class="ri-heart-pulse-line text-primary"></i>
+</div>
+<h3 class="text-lg font-bold">生体データ活用開発</h3>
+</div>
+<ul class="space-y-2 mb-4">
+<li class="flex items-start">
+<span class="text-primary mr-2">•</span>
+<span>スマートウォッチ用アプリ (Java)</span>
+</li>
+<li class="flex items-start">
+<span class="text-primary mr-2">•</span>
+<span>接続アプリ (Flutter [Dart, Java, Obj-C])</span>
+</li>
+<li class="flex items-start">
+<span class="text-primary mr-2">•</span>
+<span>管理画面/API (Rails, Next, Nuxt, Svelte予定)</span>
+</li>
+<li class="flex items-start">
+<span class="text-primary mr-2">•</span>
+<span>AI導入支援（Devinなど）</span>
+</li>
+</ul>
+<div class="flex flex-wrap gap-2 mt-4">
+<span class="tech-tag text-xs bg-gray-100 px-2 py-1 rounded">Java</span>
+<span class="tech-tag text-xs bg-gray-100 px-2 py-1 rounded">Flutter</span>
+<span class="tech-tag text-xs bg-gray-100 px-2 py-1 rounded">Rails</span>
+<span class="tech-tag text-xs bg-gray-100 px-2 py-1 rounded">AI</span>
+<span class="tech-tag text-xs bg-gray-100 px-2 py-1 rounded">HarmonyOS</span>
+</div>
+</div>
+<!-- プロジェクト2 -->
+<div class="project-card bg-white border border-gray-100 rounded-lg p-6 shadow-sm">
+<div class="flex items-center mb-4">
+<div class="w-10 h-10 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mr-3">
+<i class="ri-article-fill text-primary"></i>
+</div>
+<h3 class="text-lg font-bold">高負荷メディア開発</h3>
+</div>
+<ul class="space-y-2 mb-4">
+<li class="flex items-start">
+<span class="text-primary mr-2">•</span>
+<span>Rails、AWS インフラ構築</span>
+</li>
+<li class="flex items-start">
+<span class="text-primary mr-2">•</span>
+<span>DB設計、運用保守、サブスクリプション</span>
+</li>
+<li class="flex items-start">
+<span class="text-primary mr-2">•</span>
+<span>iOS アプリ開発、CI/CD 構築</span>
+</li>
+<li class="flex items-start">
+<span class="text-primary mr-2">•</span>
+<span>開発責任者、チームビルディング</span>
+</li>
+</ul>
+<div class="flex flex-wrap gap-2 mt-4">
+<span class="tech-tag text-xs bg-gray-100 px-2 py-1 rounded">Rails</span>
+<span class="tech-tag text-xs bg-gray-100 px-2 py-1 rounded">AWS</span>
+<span class="tech-tag text-xs bg-gray-100 px-2 py-1 rounded">iOS</span>
+<span class="tech-tag text-xs bg-gray-100 px-2 py-1 rounded">CI/CD</span>
+</div>
+</div>
+</div>
+<!-- 詳細リンク -->
+<div class="flex justify-center mt-10">
+<a href="https://profile.wolfapplication.com/" target="_blank" class="bg-primary text-white px-6 py-3 rounded-button font-medium hover:bg-opacity-90 transition-all whitespace-nowrap flex items-center">
+<span>詳細プロフィールを見る</span>
+<i class="ri-arrow-right-line ml-2"></i>
+</a>
+</div>
+</div>
+<!-- フッター -->
+<div class="py-6 px-8 bg-gray-50 text-center text-sm text-gray-500">
+<p>© 2025 Ryo Yoshida. All rights reserved.</p>
+</div>
+</div>
+</div>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+// ページ読み込み時のアニメーション
+const profileCard = document.querySelector('.profile-card');
+setTimeout(() => {
+profileCard.style.opacity = '1';
+}, 100);
+});
+</script>
+</body>
+</html>
