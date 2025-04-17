@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Ryo Yoshida - プロフィール</title>
 <script src="https://cdn.tailwindcss.com/3.4.16"></script>
-<script>tailwind.config={theme:{extend:{colors:{primary:'#2B3A67',secondary:'#5D8CAE'},borderRadius:{'none':'0px','sm':'4px',DEFAULT:'8px','md':'12px','lg':'16px','xl':'20px','2xl':'24px','3xl':'32px','full':'9999px','button':'8px'}}}}</script>
+<script>tailwind.config={theme:{extend:{colors:{primary:'#4A90E2',secondary:'#7FB3D5'},borderRadius:{'none':'0px','sm':'4px',DEFAULT:'8px','md':'12px','lg':'16px','xl':'20px','2xl':'24px','3xl':'32px','full':'9999px','button':'8px'}}}}</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Roboto+Mono&display=swap" rel="stylesheet">
@@ -15,40 +15,40 @@
 :where([class^="ri-"])::before { content: "\f3c2"; }
 body {
 font-family: 'Noto Sans JP', sans-serif;
-background-color: #FFFFFF;
+background-color: #F5F9FC;
 color: #333333;
 }
 .tech-tag {
 font-family: 'Roboto Mono', monospace;
 }
 .profile-card {
-box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+box-shadow: 0 10px 25px rgba(74, 144, 226, 0.1);
 transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 .profile-card:hover {
 transform: translateY(-5px);
-box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+box-shadow: 0 15px 30px rgba(74, 144, 226, 0.15);
 }
 .social-icon {
 transition: transform 0.2s ease, color 0.2s ease;
 }
 .social-icon:hover {
 transform: translateY(-3px);
-color: #2B3A67;
+color: #4A90E2;
 }
 .project-card {
 transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 .project-card:hover {
 transform: translateY(-5px);
-box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+box-shadow: 0 15px 30px rgba(74, 144, 226, 0.15);
 }
 input[type="checkbox"] {
 appearance: none;
 -webkit-appearance: none;
 height: 1.5rem;
 width: 1.5rem;
-border: 2px solid #2B3A67;
+border: 2px solid #4A90E2;
 border-radius: 4px;
 display: inline-flex;
 align-items: center;
@@ -56,7 +56,7 @@ justify-content: center;
 cursor: pointer;
 }
 input[type="checkbox"]:checked {
-background-color: #2B3A67;
+background-color: #4A90E2;
 position: relative;
 }
 input[type="checkbox"]:checked::after {
@@ -71,14 +71,14 @@ font-size: 1rem;
 <div class="min-h-screen flex flex-col items-center justify-center p-6">
 <div class="max-w-4xl w-full bg-white rounded-lg overflow-hidden profile-card">
 <!-- プロフィールセクション -->
-<div class="flex flex-col items-center py-12 px-6 bg-gradient-to-b from-gray-50 to-white">
+<div class="flex flex-col items-center py-12 px-6 bg-gradient-to-b from-blue-50 to-white">
 <div class="w-32 h-32 rounded-full overflow-hidden mb-6 border-4 border-white shadow-lg">
-<img src="https://profile.wolfapplication.com/profile.png" alt="Ryo Yoshida" class="w-full h-full object-cover object-top">
+<img src="./images/profile_4.jpg" alt="Ryo Yoshida" class="w-full h-full object-cover object-top">
 </div>
 <h1 class="text-3xl font-bold mb-2">Ryo Yoshida</h1>
 <div class="text-center mb-6">
   <p class="text-xl font-semibold text-gray-800">あなたの技術パートナー</p>
-  <p class="text-sm text-gray-500 mt-2">2児の父 / 海沿いの生活 / 狩猟免許持ちで活動中</p>
+  <p class="text-sm text-gray-500 mt-2">2児のパパ / 海沿いの生活 / 狩猟免許持ちで活動中</p>
 </div>
 
 <a href="https://x.com/wazgo" target="_blank" class="bg-black hover:bg-gray-900 text-white px-8 py-3 rounded-button font-medium transition-all whitespace-nowrap flex items-center gap-2 mb-6">
@@ -108,11 +108,11 @@ font-size: 1rem;
 <div class="py-10 px-8 bg-white">
 <div class="bg-gray-50 rounded-lg p-6 flex items-center justify-center mb-10">
 <div class="flex flex-col md:flex-row items-center gap-6">
-<div class="w-16 h-16 flex items-center justify-center bg-primary bg-opacity-10 rounded-full">
-<i class="ri-ai-generate-2 ri-2x text-primary"></i>
+<div class="w-16 h-16 flex items-center justify-center bg-gray-100 rounded-full">
+<i class="ri-ai-generate-2 ri-2x text-gray-600"></i>
 </div>
 <div>
-<h3 class="text-xl font-bold text-primary mb-2">AI駆動開発</h3>
+<h3 class="text-xl font-bold text-gray-800 mb-2">AI駆動開発</h3>
 <p class="text-gray-600">0→1→10→100の各フェーズにおいてAI駆動での開発手法の確立に挑戦中</p>
 </div>
 </div>
