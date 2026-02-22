@@ -258,47 +258,44 @@ img {
 }
 
 .pricing-list {
+  display: grid;
+  grid-template-columns: 11rem 1fr 7rem 9rem;
   border: 1px solid var(--gray-200);
   border-radius: var(--radius);
   overflow: hidden;
   margin-bottom: 2rem;
 }
 
-.pricing-header {
-  display: grid;
-  grid-template-columns: 200px 1fr 110px 150px;
-  background: var(--gray-50);
-  border-bottom: 1px solid var(--gray-200);
+.pricing-header,
+.pricing-plan {
+  display: contents;
 }
 
-.pricing-header span {
-  padding: 1rem 1.5rem;
-  font-size: 0.875rem;
+.pricing-header > span {
+  padding: 0.875rem 1rem;
+  font-size: 0.8125rem;
   font-weight: 500;
   color: var(--gray-600);
-}
-
-.pricing-plan {
-  display: grid;
-  grid-template-columns: 200px 1fr 110px 150px;
-  border-bottom: 1px solid var(--gray-200);
-  transition: background 0.2s ease;
-}
-
-.pricing-plan:last-child {
-  border-bottom: none;
-}
-
-.pricing-plan:hover {
   background: var(--gray-50);
+  border-bottom: 1px solid var(--gray-200);
 }
 
 .plan-name,
 .plan-description,
 .plan-price,
 .plan-period {
-  padding: 1rem 1.5rem;
-  font-size: 0.875rem;
+  padding: 0.875rem 1rem;
+  font-size: 0.8125rem;
+  border-bottom: 1px solid var(--gray-200);
+  transition: background 0.2s ease;
+}
+
+.pricing-plan:last-child > div {
+  border-bottom: none;
+}
+
+.pricing-plan:hover > div {
+  background: var(--gray-50);
 }
 
 .plan-name {
@@ -308,9 +305,11 @@ img {
 
 .plan-description {
   color: var(--gray-600);
+  line-height: 1.7;
 }
 
 .plan-price {
+  font-weight: 600;
   color: var(--gray-800);
 }
 
@@ -402,34 +401,40 @@ img {
   }
 
   .pricing-list {
-    border: none;
-    border-radius: 0;
     display: flex;
     flex-direction: column;
     gap: 0.75rem;
+    border: none;
   }
 
   .pricing-plan {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-areas:
-      "name    name"
-      "desc    desc"
-      "price   period";
+      "name   name"
+      "desc   desc"
+      "price  period";
     border: 1px solid var(--gray-200);
     border-radius: var(--radius);
     overflow: hidden;
   }
 
-  .pricing-plan:hover {
+  .pricing-plan:hover > div {
     background: none;
+  }
+
+  .plan-name,
+  .plan-description,
+  .plan-price,
+  .plan-period {
+    border-bottom: none;
   }
 
   .plan-name {
     grid-area: name;
     background: var(--gray-50);
     padding: 0.75rem;
-    border-bottom: 1px solid var(--gray-200);
+    border-bottom: 1px solid var(--gray-200) !important;
     font-weight: 700;
   }
 
@@ -448,8 +453,7 @@ img {
 
   .plan-price {
     grid-area: price;
-    padding: 0 0.75rem 0.75rem;
-    font-weight: 500;
+    padding: 0.5rem 0.75rem 0.75rem;
   }
 
   .plan-price::before {
@@ -462,7 +466,7 @@ img {
 
   .plan-period {
     grid-area: period;
-    padding: 0 0.75rem 0.75rem;
+    padding: 0.5rem 0.75rem 0.75rem;
   }
 
   .plan-period::before {
