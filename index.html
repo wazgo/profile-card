@@ -5,276 +5,126 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="あいまいな段階から入り、アイデアの整理から設計・実装・運用・改善まで、小さく速く伴走します。少人数でも試行回数を増やしながら前に進めます。">
 <title>Ryo Yoshida - 事業の芯を一緒に作る人</title>
-<script src="https://cdn.tailwindcss.com/3.4.16"></script>
-<script>tailwind.config={theme:{extend:{colors:{primary:'#4A90E2',secondary:'#7FB3D5'},borderRadius:{'none':'0px','sm':'4px',DEFAULT:'8px','md':'12px','lg':'16px','xl':'20px','2xl':'24px','3xl':'32px','full':'9999px','button':'8px'}}}}</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Roboto+Mono&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
 <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet">
-<style>
-:where([class^="ri-"])::before { content: "\f3c2"; }
-body {
-font-family: 'Noto Sans JP', sans-serif;
-background-color: #F5F9FC;
-color: #333333;
-}
-.tech-tag {
-font-family: 'Roboto Mono', monospace;
-}
-.profile-card {
-box-shadow: 0 10px 25px rgba(74, 144, 226, 0.1);
-transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-.profile-card:hover {
-transform: translateY(-5px);
-box-shadow: 0 15px 30px rgba(74, 144, 226, 0.15);
-}
-.social-icon {
-transition: transform 0.2s ease, color 0.2s ease;
-}
-.social-icon:hover {
-transform: translateY(-3px);
-color: #4A90E2;
-}
-.project-card {
-transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-.project-card:hover {
-transform: translateY(-5px);
-box-shadow: 0 15px 30px rgba(74, 144, 226, 0.15);
-}
-input[type="checkbox"] {
-appearance: none;
--webkit-appearance: none;
-height: 1.5rem;
-width: 1.5rem;
-border: 2px solid #4A90E2;
-border-radius: 4px;
-display: inline-flex;
-align-items: center;
-justify-content: center;
-cursor: pointer;
-}
-input[type="checkbox"]:checked {
-background-color: #4A90E2;
-position: relative;
-}
-input[type="checkbox"]:checked::after {
-content: "✓";
-color: white;
-position: absolute;
-font-size: 1rem;
-}
-</style>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-<div class="min-h-screen flex flex-col items-center justify-center p-3 sm:p-6">
-<div class="max-w-4xl w-full bg-white rounded-lg overflow-hidden profile-card">
-<!-- プロフィールセクション -->
-<div class="flex flex-col items-center py-12 px-6 bg-gradient-to-b from-blue-50 to-white">
-<div class="w-32 h-32 rounded-full overflow-hidden mb-6 border-4 border-white shadow-lg">
-<img src="./images/profile_5.jpg" alt="Ryo Yoshida" class="w-full h-full object-cover object-top">
-</div>
-<h1 class="text-3xl font-bold mb-2">Ryo Yoshida</h1>
-<div class="text-center mb-6">
-  <p class="text-xl font-semibold text-gray-800">事業の芯を一緒に作る人</p>
-  <p class="text-sm text-gray-500 mt-2">古民家を拠点に開発 / 海沿いの暮らし / 畑と狩猟</p>
-</div>
+<div class="page-wrapper">
+<div class="profile-card">
 
-<!-- プロフィールカード -->
-<div class="w-full max-w-xl bg-white rounded-lg px-3 py-4 sm:p-6 shadow-sm border border-gray-100 mb-6">
-  <p class="text-sm text-gray-700 leading-relaxed">
-    あいまいな段階から入り、一緒に形にします。AIは道具として使いますが、中心にあるのは構造と意思決定です。事業として何を目指すかの整理から、本当に使われる形までを一緒に描く<span class="font-semibold text-primary">事業を育てる開発</span>を行います。方向性や優先度判断が揺らぐ段階でも、一緒に整理しながら前に進めます。
-    <br><br>
-    コンパクトに始め、プロトタイプから本番運用までを見据えて設計・実装します。<span class="font-semibold">少人数でもスピードと試行回数を両立</span>させます。アイデアの具体化から、実装・改善まで、一貫して支援します。<span class="font-semibold text-primary">仕様が曖昧な段階からでも前に進める</span>、そんな柔らかくて素早い開発パートナーでありたいと考えています。
-  </p>
-</div>
+<!-- プロフィールヘッダー -->
+<div class="profile-header">
+  <div class="avatar">
+    <img src="./images/profile_5.jpg" alt="Ryo Yoshida">
+  </div>
+  <h1 class="profile-name">Ryo Yoshida</h1>
+  <div class="profile-tagline">
+    <p class="title">事業の芯を一緒に作る人</p>
+    <p class="subtitle">古民家を拠点に開発 / 海沿いの暮らし / 畑と狩猟</p>
+  </div>
 
-<a href="https://x.com/wazgo" target="_blank" class="bg-black hover:bg-gray-900 text-white px-8 py-3 rounded-button font-medium transition-all whitespace-nowrap flex items-center gap-2 mb-6">
-<i class="ri-twitter-x-line ri-lg"></i>
-<span>@wazgo</span>
-</a>
+  <div class="bio-card">
+    <p>
+      あいまいな段階から入り、一緒に形にします。AIは道具として使いますが、中心にあるのは構造と意思決定です。事業として何を目指すかの整理から、本当に使われる形までを一緒に描く<span class="text-accent">事業を育てる開発</span>を行います。方向性や優先度判断が揺らぐ段階でも、一緒に整理しながら前に進めます。
+      <br><br>
+      コンパクトに始め、プロトタイプから本番運用までを見据えて設計・実装します。<span class="text-bold">少人数でもスピードと試行回数を両立</span>させます。アイデアの具体化から、実装・改善まで、一貫して支援します。<span class="text-accent">仕様が曖昧な段階からでも前に進める</span>、そんな柔らかくて素早い開発パートナーでありたいと考えています。
+    </p>
+  </div>
 
-<!-- SNSリンク -->
-<div class="flex space-x-6 mb-8">
-<a href="https://facebook.com/ryo.yoshida" target="_blank" class="social-icon w-12 h-12 flex items-center justify-center text-gray-600 hover:text-primary">
-<i class="ri-facebook-fill ri-xl"></i>
-</a>
-<a href="https://note.com/wazgo" target="_blank" class="social-icon w-12 h-12 flex items-center justify-center text-gray-600 hover:text-primary">
-  <svg width="44" height="44" viewBox="0 0 493 493" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <rect x="1" y="1" width="490.2" height="490.2" rx="104" fill="white"/>
-    <path d="M139.2 141.7C180.4 141.7 236.8 139.6 277.3 140.7C331.6 142.1 352.1 165.8 352.8 224.2C353.5 257.3 352.8 351.9 352.8 351.9H294C294 269.1 294.3 255.4 294 229.3C293.3 206.3 286.8 195.4 269.1 193.3C250.4 191.2 198 193 198 193V352H139.2V141.7Z" fill="#040000"/>
-    <rect x="1" y="1" width="490.2" height="490.2" rx="104" stroke="#EBEBEB" stroke-width="2"/>
-  </svg>
-</a>
-<a href="https://instagram.com/wazgo" target="_blank" class="social-icon w-12 h-12 flex items-center justify-center text-gray-600 hover:text-primary">
-<i class="ri-instagram-fill ri-xl"></i>
-</a>
-</div>
+  <a href="https://x.com/wazgo" target="_blank" class="x-button">
+    <i class="ri-twitter-x-line ri-lg"></i>
+    <span>@wazgo</span>
+  </a>
+
+  <div class="social-links">
+    <a href="https://facebook.com/ryo.yoshida" target="_blank" class="social-icon">
+      <i class="ri-facebook-fill ri-xl"></i>
+    </a>
+    <a href="https://note.com/wazgo" target="_blank" class="social-icon">
+      <svg width="44" height="44" viewBox="0 0 493 493" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect x="1" y="1" width="490.2" height="490.2" rx="104" fill="white"/>
+        <path d="M139.2 141.7C180.4 141.7 236.8 139.6 277.3 140.7C331.6 142.1 352.1 165.8 352.8 224.2C353.5 257.3 352.8 351.9 352.8 351.9H294C294 269.1 294.3 255.4 294 229.3C293.3 206.3 286.8 195.4 269.1 193.3C250.4 191.2 198 193 198 193V352H139.2V141.7Z" fill="#040000"/>
+        <rect x="1" y="1" width="490.2" height="490.2" rx="104" stroke="#EBEBEB" stroke-width="2"/>
+      </svg>
+    </a>
+    <a href="https://instagram.com/wazgo" target="_blank" class="social-icon">
+      <i class="ri-instagram-fill ri-xl"></i>
+    </a>
+  </div>
 </div>
 
 <!-- 現在のフォーカス -->
-<h2 class="text-2xl font-bold mb-6 text-center">現在のフォーカス</h2>
-<div class="py-10 px-3 sm:px-8 bg-white">
-<div class="bg-gray-50 rounded-lg p-4 sm:p-6 flex items-center justify-center mb-10">
-<div class="flex flex-col md:flex-row items-center gap-6">
-<div class="w-16 h-16 flex items-center justify-center bg-gray-100 rounded-full">
-<i class="ri-ai-generate-2 ri-2x text-gray-600"></i>
-</div>
-<div>
-<h3 class="text-base sm:text-lg font-bold text-gray-800 mb-2 text-left whitespace-nowrap">構造から考えるプロダクト開発</h3>
-<p class="text-gray-600">技術だけでなくユーザー理解や事業判断を含めた、プロダクトづくりを探求中。</p>
-</div>
-</div>
-</div>
-
-<!-- 料金体系 -->
-<h2 class="text-2xl font-bold mb-8 text-center mt-12">料金体系</h2>
-
-<!-- PC表示用テーブル -->
-<div class="hidden sm:block overflow-x-auto rounded-lg border border-gray-200 mb-8">
-  <table class="min-w-full divide-y divide-gray-200">
-    <thead class="bg-gray-50">
-      <tr>
-        <th scope="col" class="px-3 sm:px-6 py-4 text-left text-xs sm:text-sm font-medium text-gray-600">サービス</th>
-        <th scope="col" class="px-3 sm:px-6 py-4 text-left text-xs sm:text-sm font-medium text-gray-600">内容</th>
-        <th scope="col" class="px-3 sm:px-6 py-4 text-left text-xs sm:text-sm font-medium text-gray-600">料金目安</th>
-        <th scope="col" class="px-3 sm:px-6 py-4 text-left text-xs sm:text-sm font-medium text-gray-600">伴走/期間</th>
-      </tr>
-    </thead>
-    <tbody class="bg-white divide-y divide-gray-200">
-      <!-- プラン1 -->
-      <tr class="hover:bg-gray-50 transition-colors">
-        <td class="px-3 sm:px-6 py-4 whitespace-nowrap text-xs sm:text-sm font-medium text-gray-800">高速プロトタイププラン</td>
-        <td class="px-3 sm:px-6 py-4">
-          <p class="text-xs sm:text-sm text-gray-600">思いついたアイデアを短期間で動くプロトタイプにします。AIを組み合わせ、小さく試しながらプロダクトの芯を探るフェーズに向いています。</p>
-        </td>
-        <td class="px-3 sm:px-6 py-4 whitespace-nowrap text-xs sm:text-sm text-gray-800">55万円〜</td>
-        <td class="px-3 sm:px-6 py-4 whitespace-nowrap text-xs sm:text-sm text-gray-600">1ヶ月以内</td>
-      </tr>
-      
-      <!-- プラン2 -->
-      <tr class="hover:bg-gray-50 transition-colors">
-        <td class="px-3 sm:px-6 py-4 whitespace-nowrap text-xs sm:text-sm font-medium text-gray-800">AI開発チーム</td>
-        <td class="px-3 sm:px-6 py-4">
-          <p class="text-xs sm:text-sm text-gray-600">フルサイクルな開発で、通常は数人〜数十人チームで行う開発を少人数でカバーします。MVP〜本番運用までの技術開発に加え、優先度判断やロードマップ整理など、意思決定の前提づくりから伴走します。</p>
-        </td>
-        <td class="px-3 sm:px-6 py-4 whitespace-nowrap text-xs sm:text-sm text-gray-800">300万円/月〜</td>
-        <td class="px-3 sm:px-6 py-4 whitespace-nowrap text-xs sm:text-sm text-gray-600">週1-2回MTG</td>
-      </tr>
-      
-      <!-- プラン3 -->
-      <tr class="hover:bg-gray-50 transition-colors">
-        <td class="px-3 sm:px-6 py-4 whitespace-nowrap text-xs sm:text-sm font-medium text-gray-800">社内向けAI導入パートナー</td>
-        <td class="px-3 sm:px-6 py-4">
-          <p class="text-xs sm:text-sm text-gray-600">既存業務やプロダクトにAIを組み込みながら、私自身のAI駆動の進め方を実践形式で共有します。PoCを通じて実際に動くものをつくりながら、意思決定や構造設計のプロセスを可視化します。習得支援や内製化の伴走までは行いませんが、思考と型は持ち帰っていただけます。</p>
-        </td>
-        <td class="px-3 sm:px-6 py-4 whitespace-nowrap text-xs sm:text-sm text-gray-800">30万円/月〜</td>
-        <td class="px-3 sm:px-6 py-4 whitespace-nowrap text-xs sm:text-sm text-gray-600">オンライン<br>実演＋議論<br>月2回 2〜3時間</td>
-      </tr>
-    </tbody>
-  </table>
-</div>
-
-<!-- スマホ表示用カード -->
-<div class="sm:hidden space-y-3 mb-8">
-  <!-- プラン1 -->
-  <div class="bg-white shadow-sm rounded-lg overflow-hidden border border-gray-200">
-    <div class="bg-gray-50 px-3 py-3 border-b border-gray-200">
-      <h3 class="font-bold text-gray-800">高速プロトタイププラン</h3>
-    </div>
-    <div class="p-3 space-y-3">
-      <div>
-        <div class="text-xs text-gray-500 mb-1">内容</div>
-        <div class="text-sm">思いついたアイデアを短期間で動くプロトタイプにします。AIを組み合わせ、小さく試しながらプロダクトの芯を探るフェーズに向いています。</div>
+<h2 class="section-title">現在のフォーカス</h2>
+<div class="content-area">
+  <div class="focus-card">
+    <div class="focus-inner">
+      <div class="focus-icon">
+        <i class="ri-ai-generate-2 ri-2x"></i>
       </div>
-      <div class="flex justify-between items-center">
-        <div>
-          <div class="text-xs text-gray-500 mb-1">料金目安</div>
-          <div class="text-sm font-medium">55万円〜</div>
-        </div>
-        <div>
-          <div class="text-xs text-gray-500 mb-1">伴走/期間</div>
-          <div class="text-sm">1ヶ月以内</div>
-        </div>
+      <div>
+        <h3 class="focus-title">構造から考えるプロダクト開発</h3>
+        <p class="focus-description">技術だけでなくユーザー理解や事業判断を含めた、プロダクトづくりを探求中。</p>
       </div>
     </div>
   </div>
-  
-  <!-- プラン2 -->
-  <div class="bg-white shadow-sm rounded-lg overflow-hidden border border-gray-200">
-    <div class="bg-gray-50 px-3 py-3 border-b border-gray-200">
-      <h3 class="font-bold text-gray-800">AI開発チーム</h3>
+
+  <!-- 料金体系 -->
+  <h2 class="pricing-title">料金体系</h2>
+  <div class="pricing-list">
+    <div class="pricing-header">
+      <span>サービス</span>
+      <span>内容</span>
+      <span>料金目安</span>
+      <span>伴走/期間</span>
     </div>
-    <div class="p-3 space-y-3">
-      <div>
-        <div class="text-xs text-gray-500 mb-1">内容</div>
-        <div class="text-sm">フルサイクルな開発で、通常は数人〜数十人チームで行う開発を少人数でカバーします。MVP〜本番運用までの技術開発に加え、優先度判断やロードマップ整理など、意思決定の前提づくりから伴走します。</div>
-      </div>
-      <div class="flex justify-between items-center">
-        <div>
-          <div class="text-xs text-gray-500 mb-1">料金目安</div>
-          <div class="text-sm font-medium">300万円/月〜</div>
-        </div>
-        <div>
-          <div class="text-xs text-gray-500 mb-1">伴走/期間</div>
-          <div class="text-sm">週1-2回MTG</div>
-        </div>
-      </div>
+    <div class="pricing-plan">
+      <div class="plan-name">高速プロトタイププラン</div>
+      <div class="plan-description">思いついたアイデアを短期間で動くプロトタイプにします。AIを組み合わせ、小さく試しながらプロダクトの芯を探るフェーズに向いています。</div>
+      <div class="plan-price">55万円〜</div>
+      <div class="plan-period">1ヶ月以内</div>
+    </div>
+    <div class="pricing-plan">
+      <div class="plan-name">AI開発チーム</div>
+      <div class="plan-description">フルサイクルな開発で、通常は数人〜数十人チームで行う開発を少人数でカバーします。MVP〜本番運用までの技術開発に加え、優先度判断やロードマップ整理など、意思決定の前提づくりから伴走します。</div>
+      <div class="plan-price">300万円/月〜</div>
+      <div class="plan-period">週1-2回MTG</div>
+    </div>
+    <div class="pricing-plan">
+      <div class="plan-name">社内向けAI導入パートナー</div>
+      <div class="plan-description">既存業務やプロダクトにAIを組み込みながら、私自身のAI駆動の進め方を実践形式で共有します。PoCを通じて実際に動くものをつくりながら、意思決定や構造設計のプロセスを可視化します。習得支援や内製化の伴走までは行いませんが、思考と型は持ち帰っていただけます。</div>
+      <div class="plan-price">30万円/月〜</div>
+      <div class="plan-period">オンライン<br>実演＋議論<br>月2回 2〜3時間</div>
     </div>
   </div>
-  
-  <!-- プラン3 -->
-  <div class="bg-white shadow-sm rounded-lg overflow-hidden border border-gray-200">
-    <div class="bg-gray-50 px-3 py-3 border-b border-gray-200">
-      <h3 class="font-bold text-gray-800">社内向けAI導入パートナー</h3>
-    </div>
-    <div class="p-3 space-y-3">
-      <div>
-        <div class="text-xs text-gray-500 mb-1">内容</div>
-        <div class="text-sm">既存業務やプロダクトにAIを組み込みながら、私自身のAI駆動の進め方を実践形式で共有します。PoCを通じて実際に動くものをつくりながら、意思決定や構造設計のプロセスを可視化します。習得支援や内製化の伴走までは行いませんが、思考と型は持ち帰っていただけます。</div>
-      </div>
-      <div class="flex justify-between items-center">
-        <div>
-          <div class="text-xs text-gray-500 mb-1">料金目安</div>
-          <div class="text-sm font-medium">30万円/月〜</div>
-        </div>
-        <div>
-          <div class="text-xs text-gray-500 mb-1">伴走/期間</div>
-          <div class="text-sm">オンライン<br>実演＋議論<br>月2回 2〜3時間</div>
-        </div>
-      </div>
-    </div>
+
+  <!-- CTA -->
+  <div class="cta-message">
+    <h3>事業の芯から、一緒に形にしましょう</h3>
   </div>
-</div>
-
-<!-- 想いメッセージ -->
-<div class="text-center mb-8">
-  <h3 class="text-2xl font-bold text-primary mb-2">事業の芯から、一緒に形にしましょう</h3>
-</div>
-
-<!-- お問い合わせボタン -->
-<div class="flex justify-center my-10">
-  <a href="https://forms.gle/N6Q2F8dkRHsgDpta7" target="_blank" class="bg-primary hover:bg-primary/90 text-white text-lg px-10 py-5 rounded-button font-bold transition-all whitespace-nowrap flex items-center gap-3 shadow-lg hover:shadow-xl transform hover:-translate-y-1 border-2 border-primary/20">
-    <i class="ri-mail-send-line ri-lg"></i>
-    <span>お問い合わせはこちら</span>
-  </a>
+  <div class="cta-wrapper">
+    <a href="https://forms.gle/N6Q2F8dkRHsgDpta7" target="_blank" class="cta-button">
+      <i class="ri-mail-send-line ri-lg"></i>
+      <span>お問い合わせはこちら</span>
+    </a>
+  </div>
 </div>
 
 <!-- フッター -->
-<div class="py-6 px-8 bg-gray-50 text-center text-sm text-gray-500">
-<p>© 2026 Ryo Yoshida - WolfApplication. All rights reserved.</p>
+<div class="site-footer">
+  <p>© 2026 Ryo Yoshida - WolfApplication. All rights reserved.</p>
 </div>
+
 </div>
 </div>
 <script>
 document.addEventListener('DOMContentLoaded', function() {
-// ページ読み込み時のアニメーション
-const profileCard = document.querySelector('.profile-card');
-setTimeout(() => {
-profileCard.style.opacity = '1';
-}, 100);
+  const profileCard = document.querySelector('.profile-card');
+  setTimeout(() => {
+    profileCard.style.opacity = '1';
+  }, 100);
 });
 </script>
 </body>

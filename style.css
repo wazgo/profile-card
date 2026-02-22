@@ -1,0 +1,475 @@
+/* ===== Variables ===== */
+:root {
+  --primary: #4A90E2;
+  --primary-light: rgba(74, 144, 226, 0.1);
+  --primary-hover: rgba(74, 144, 226, 0.15);
+  --text: #333333;
+  --text-light: #6B7280;
+  --gray-50: #F9FAFB;
+  --gray-100: #F3F4F6;
+  --gray-200: #E5E7EB;
+  --gray-500: #6B7280;
+  --gray-600: #4B5563;
+  --gray-700: #374151;
+  --gray-800: #1F2937;
+  --blue-50: #EFF6FF;
+  --radius: 8px;
+  --radius-lg: 16px;
+  --radius-full: 9999px;
+}
+
+/* ===== Reset & Base ===== */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Noto Sans JP', sans-serif;
+  background-color: #F5F9FC;
+  color: var(--text);
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+:where([class^="ri-"])::before {
+  content: "\f3c2";
+}
+
+/* ===== Page Layout ===== */
+.page-wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+}
+
+/* ===== Profile Card (outer shell) ===== */
+.profile-card {
+  max-width: 56rem;
+  width: 100%;
+  background: #fff;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: 0 10px 25px var(--primary-light);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.profile-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px var(--primary-hover);
+}
+
+/* ===== Profile Header ===== */
+.profile-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 3rem 1.5rem;
+  background: linear-gradient(to bottom, var(--blue-50), #fff);
+}
+
+.avatar {
+  width: 8rem;
+  height: 8rem;
+  border-radius: var(--radius-full);
+  overflow: hidden;
+  margin-bottom: 1.5rem;
+  border: 4px solid #fff;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+.avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+}
+
+.profile-name {
+  font-size: 1.875rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.profile-tagline {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.profile-tagline .title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--gray-800);
+}
+
+.profile-tagline .subtitle {
+  font-size: 0.875rem;
+  color: var(--text-light);
+  margin-top: 0.5rem;
+}
+
+/* ===== Bio Card ===== */
+.bio-card {
+  width: 100%;
+  max-width: 36rem;
+  background: #fff;
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  border: 1px solid var(--gray-100);
+  margin-bottom: 1.5rem;
+}
+
+.bio-card p {
+  font-size: 0.875rem;
+  color: var(--gray-700);
+  line-height: 1.75;
+}
+
+.text-accent {
+  font-weight: 600;
+  color: var(--primary);
+}
+
+.text-bold {
+  font-weight: 600;
+}
+
+/* ===== X (Twitter) Button ===== */
+.x-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: #000;
+  color: #fff;
+  padding: 0.75rem 2rem;
+  border-radius: var(--radius);
+  font-weight: 500;
+  white-space: nowrap;
+  transition: background 0.2s ease;
+  margin-bottom: 1.5rem;
+}
+
+.x-button:hover {
+  background: #1a1a1a;
+}
+
+/* ===== Social Links ===== */
+.social-links {
+  display: flex;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.social-icon {
+  width: 3rem;
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--gray-600);
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.social-icon:hover {
+  transform: translateY(-3px);
+  color: var(--primary);
+}
+
+/* ===== Section Titles ===== */
+.section-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+/* ===== Content Area ===== */
+.content-area {
+  padding: 2.5rem 2rem;
+  background: #fff;
+}
+
+/* ===== Focus Card ===== */
+.focus-card {
+  background: var(--gray-50);
+  border-radius: var(--radius-lg);
+  padding: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 2.5rem;
+}
+
+.focus-inner {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.focus-icon {
+  width: 4rem;
+  height: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--gray-100);
+  border-radius: var(--radius-full);
+  flex-shrink: 0;
+}
+
+.focus-icon i {
+  color: var(--gray-600);
+}
+
+.focus-title {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: var(--gray-800);
+  margin-bottom: 0.5rem;
+}
+
+.focus-description {
+  color: var(--gray-600);
+}
+
+/* ===== Pricing ===== */
+.pricing-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 2rem;
+  margin-top: 3rem;
+}
+
+.pricing-list {
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius);
+  overflow: hidden;
+  margin-bottom: 2rem;
+}
+
+.pricing-header {
+  display: grid;
+  grid-template-columns: 200px 1fr 110px 150px;
+  background: var(--gray-50);
+  border-bottom: 1px solid var(--gray-200);
+}
+
+.pricing-header span {
+  padding: 1rem 1.5rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--gray-600);
+}
+
+.pricing-plan {
+  display: grid;
+  grid-template-columns: 200px 1fr 110px 150px;
+  border-bottom: 1px solid var(--gray-200);
+  transition: background 0.2s ease;
+}
+
+.pricing-plan:last-child {
+  border-bottom: none;
+}
+
+.pricing-plan:hover {
+  background: var(--gray-50);
+}
+
+.plan-name,
+.plan-description,
+.plan-price,
+.plan-period {
+  padding: 1rem 1.5rem;
+  font-size: 0.875rem;
+}
+
+.plan-name {
+  font-weight: 600;
+  color: var(--gray-800);
+}
+
+.plan-description {
+  color: var(--gray-600);
+}
+
+.plan-price {
+  color: var(--gray-800);
+}
+
+.plan-period {
+  color: var(--gray-600);
+}
+
+/* ===== CTA ===== */
+.cta-message {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.cta-message h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--primary);
+}
+
+.cta-wrapper {
+  display: flex;
+  justify-content: center;
+  margin: 2.5rem 0;
+}
+
+.cta-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  background: var(--primary);
+  color: #fff;
+  font-size: 1.125rem;
+  font-weight: 700;
+  padding: 1.25rem 2.5rem;
+  border-radius: var(--radius);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  border: 2px solid rgba(74, 144, 226, 0.2);
+  white-space: nowrap;
+  transition: all 0.3s ease;
+}
+
+.cta-button:hover {
+  background: #3a7bc8;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+  transform: translateY(-2px);
+}
+
+/* ===== Footer ===== */
+.site-footer {
+  padding: 1.5rem 2rem;
+  background: var(--gray-50);
+  text-align: center;
+  font-size: 0.875rem;
+  color: var(--text-light);
+}
+
+/* ====================================================
+   Responsive — Mobile (max-width: 639px)
+   ==================================================== */
+@media (max-width: 639px) {
+  .page-wrapper {
+    padding: 0.75rem;
+  }
+
+  .content-area {
+    padding: 2.5rem 0.75rem;
+  }
+
+  .bio-card {
+    padding: 0.75rem 0.75rem 1rem;
+  }
+
+  .focus-inner {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .focus-title {
+    white-space: nowrap;
+  }
+
+  .focus-card {
+    padding: 1rem;
+  }
+
+  /* --- Pricing: table → cards --- */
+  .pricing-header {
+    display: none;
+  }
+
+  .pricing-list {
+    border: none;
+    border-radius: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .pricing-plan {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "name    name"
+      "desc    desc"
+      "price   period";
+    border: 1px solid var(--gray-200);
+    border-radius: var(--radius);
+    overflow: hidden;
+  }
+
+  .pricing-plan:hover {
+    background: none;
+  }
+
+  .plan-name {
+    grid-area: name;
+    background: var(--gray-50);
+    padding: 0.75rem;
+    border-bottom: 1px solid var(--gray-200);
+    font-weight: 700;
+  }
+
+  .plan-description {
+    grid-area: desc;
+    padding: 0.75rem;
+  }
+
+  .plan-description::before {
+    content: '内容';
+    display: block;
+    font-size: 0.75rem;
+    color: var(--text-light);
+    margin-bottom: 0.25rem;
+  }
+
+  .plan-price {
+    grid-area: price;
+    padding: 0 0.75rem 0.75rem;
+    font-weight: 500;
+  }
+
+  .plan-price::before {
+    content: '料金目安';
+    display: block;
+    font-size: 0.75rem;
+    color: var(--text-light);
+    margin-bottom: 0.25rem;
+  }
+
+  .plan-period {
+    grid-area: period;
+    padding: 0 0.75rem 0.75rem;
+  }
+
+  .plan-period::before {
+    content: '伴走/期間';
+    display: block;
+    font-size: 0.75rem;
+    color: var(--text-light);
+    margin-bottom: 0.25rem;
+  }
+}
