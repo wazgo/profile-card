@@ -259,7 +259,7 @@ img {
 
 .pricing-list {
   display: grid;
-  grid-template-columns: 11rem 1fr 7rem 9rem;
+  grid-template-columns: auto 1fr auto;
   border: 1px solid var(--gray-200);
   border-radius: var(--radius);
   overflow: hidden;
@@ -282,8 +282,7 @@ img {
 
 .plan-name,
 .plan-description,
-.plan-price,
-.plan-period {
+.plan-price {
   padding: 0.875rem 1rem;
   font-size: 0.8125rem;
   border-bottom: 1px solid var(--gray-200);
@@ -301,6 +300,7 @@ img {
 .plan-name {
   font-weight: 600;
   color: var(--gray-800);
+  white-space: nowrap;
 }
 
 .plan-description {
@@ -311,10 +311,24 @@ img {
 .plan-price {
   font-weight: 600;
   color: var(--gray-800);
+  white-space: nowrap;
 }
 
-.plan-period {
+.plan-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.375rem;
+  margin-top: 0.5rem;
+}
+
+.plan-tag {
+  display: inline-block;
+  font-size: 0.6875rem;
+  padding: 0.15rem 0.5rem;
+  background: var(--gray-100);
   color: var(--gray-600);
+  border-radius: var(--radius-full);
+  white-space: nowrap;
 }
 
 /* ===== CTA ===== */
@@ -409,11 +423,11 @@ img {
 
   .pricing-plan {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     grid-template-areas:
-      "name   name"
-      "desc   desc"
-      "price  period";
+      "name"
+      "desc"
+      "price";
     border: 1px solid var(--gray-200);
     border-radius: var(--radius);
     overflow: hidden;
@@ -425,8 +439,7 @@ img {
 
   .plan-name,
   .plan-description,
-  .plan-price,
-  .plan-period {
+  .plan-price {
     border-bottom: none;
   }
 
@@ -443,14 +456,6 @@ img {
     padding: 0.75rem;
   }
 
-  .plan-description::before {
-    content: '内容';
-    display: block;
-    font-size: 0.75rem;
-    color: var(--text-light);
-    margin-bottom: 0.25rem;
-  }
-
   .plan-price {
     grid-area: price;
     padding: 0.5rem 0.75rem 0.75rem;
@@ -458,19 +463,6 @@ img {
 
   .plan-price::before {
     content: '料金目安';
-    display: block;
-    font-size: 0.75rem;
-    color: var(--text-light);
-    margin-bottom: 0.25rem;
-  }
-
-  .plan-period {
-    grid-area: period;
-    padding: 0.5rem 0.75rem 0.75rem;
-  }
-
-  .plan-period::before {
-    content: '伴走/期間';
     display: block;
     font-size: 0.75rem;
     color: var(--text-light);
