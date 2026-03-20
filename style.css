@@ -380,6 +380,20 @@ img {
   color: var(--text-light);
 }
 
+.site-footer .footer-nav {
+  margin-bottom: 0.5rem;
+}
+
+.site-footer .footer-nav a {
+  color: var(--primary);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.site-footer .footer-nav a:hover {
+  color: var(--gray-700);
+}
+
 /* ====================================================
    Responsive — Mobile (max-width: 639px)
    ==================================================== */
