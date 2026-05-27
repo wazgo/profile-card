@@ -490,7 +490,8 @@ img {
 
 .symptom-list {
   list-style: none;
-  max-width: 30rem;
+  width: fit-content;
+  max-width: 100%;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -521,6 +522,11 @@ img {
   font-weight: 500;
   color: var(--ocean-deep);
   line-height: 1.7;
+}
+
+/* PC = 長い文 / スマホ = 短い文 の出し分け */
+.show-sp {
+  display: none;
 }
 
 .flow-branch {
@@ -675,5 +681,30 @@ img {
   .plan-description {
     margin-top: 0.5rem;
     padding-top: 0.5rem;
+  }
+
+  .flow-symptoms {
+    padding: 1.5rem 1.25rem;
+  }
+
+  .flow-block-title {
+    font-size: 0.9375rem;
+  }
+
+  .symptom-list li {
+    font-size: 0.8125rem;
+    padding-left: 1.5rem;
+  }
+
+  .symptom-conclusion {
+    font-size: 0.875rem;
+  }
+
+  .show-pc {
+    display: none;
+  }
+
+  .show-sp {
+    display: inline;
   }
 }

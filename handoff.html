@@ -17,22 +17,25 @@
 
   <div class="content-area">
     <a href="./index.html" class="back-link">← 関わり方と料金にもどる</a>
-    <h1 class="detail-title">作りかけを引き継ぐ</h1>
-    <p class="detail-lead">「動くものはできた。でも、本番にできない」。そこからを引き受けます。なぜ詰まるのか、どう進めるのかを書いておきます。</p>
+    <h1 class="detail-title">作りかけを、本番品質に</h1>
+    <p class="detail-lead">「手元で動くものはできた。でも、本番化できない」。そこからを引き受けます。なぜ詰まるのか、どう進めるのかを、ここでお伝えします。</p>
 
     <div class="flow-symptoms fade-up">
       <h2 class="flow-block-title">こんなところで、止まっていませんか？</h2>
       <ul class="symptom-list">
-        <li>ローカルでは動くのに、サーバーに上げると動かない</li>
-        <li>画面の数字が埋め込みで、本物のデータが入っていない</li>
-        <li>ログインや保存みたいな裏側が、無いか不安</li>
-        <li>gitが散らかっていて、他の人に渡せない</li>
-        <li>前に作っていた人がいなくなって、誰も中身を触れない</li>
+        <li><span class="show-pc">Claudeでどんどん作れたのに、直してもらうほど別の場所が壊れる</span><span class="show-sp">Claudeで直すほど、別のところが壊れる</span></li>
+        <li><span class="show-pc">ローカルでは動くのに、サーバーに上げると動かない</span><span class="show-sp">ローカルでは動くのに、上げると動かない</span></li>
+        <li><span class="show-pc">画面の数字が埋め込みで、本物のデータが入っていない</span><span class="show-sp">数字が埋め込みで、本物のデータじゃない</span></li>
+        <li><span class="show-pc">データベースをAIに言われるまま作ったので、この設計で大丈夫かわからない</span><span class="show-sp">DB設計がAIまかせで、これでいいか不安</span></li>
+        <li><span class="show-pc">ログインまわりを、安全に作れているか自信がない</span><span class="show-sp">ログインまわりが、安全か自信がない</span></li>
+        <li><span class="show-pc">APIキーやパスワードがコードに書いたままで、公開していいのかわからない</span><span class="show-sp">APIキーがコードに直書きのままで不安</span></li>
+        <li><span class="show-pc">gitが散らかっていて、他の人に渡せない</span><span class="show-sp">gitが散らかって、人に渡せない</span></li>
+        <li><span class="show-pc">前に作っていた人がいなくなって、誰も中身を触れない</span><span class="show-sp">作った人がいなくなり、誰も触れない</span></li>
       </ul>
-      <p class="symptom-conclusion">どれも「見た目が動く」と「本番で使える」は別、という同じ話です。</p>
+      <p class="symptom-conclusion"><span class="show-pc">動いて見えるのと、本番で使えるのは、別物です。</span><span class="show-sp">動いて見えるのと、本番は別物です。</span></p>
     </div>
 
-    <p class="detail-body">AIで作ると、目に見える部分から先に仕上がります。認証やデータの扱い、運用みたいな裏側は後回しになりやすい。だから「あと少し」に見えて、本番までの距離がまだ残っています。これは作り方の問題ではなく、順番の問題です。</p>
+    <p class="detail-body">ClaudeのようなAIで作ると、画面など目に見える部分から先に形になります。認証やデータの扱い、運用といった裏側は、どうしても後回しになりがちです。だから、あと少しに見えても、本番まではまだ距離が残ります。やり方を間違えたわけではありません。誰が作っても、こうなります。</p>
 
     <div class="flow-branch fade-up">
       <h2 class="flow-block-title">あなたの作りかけは、どれに近い？</h2>
@@ -41,7 +44,7 @@
         <div class="branch-card">外注・前任者が抜けた</div>
         <div class="branch-card">社内の片手間で作った</div>
       </div>
-      <p class="branch-conclusion">入り方は違っても、やることは同じです。まず中身を見て、本番までに何が要るかをはっきりさせます。</p>
+      <p class="branch-conclusion">入り方は違っても、やることは同じです。まず中身を見て、本番までに何が必要かをはっきりさせます。</p>
     </div>
 
     <h2 class="section-title flow-heading">進め方</h2>
@@ -49,28 +52,28 @@
       <li class="flow-step fade-up">
         <span class="flow-step-num">1</span>
         <div class="flow-step-body">
-          <h3 class="flow-step-title">まず、中身を見る</h3>
-          <p>コードと、いまの事業の話を聞かせてください。本番にするのに何が要るか、何は後でいいか、何は別で考えるべきかを分けます。「どこまでやれば本番か」を、ここで決めてしまいます。</p>
+          <h3 class="flow-step-title">まず、中身を見ます</h3>
+          <p>コードと、いまの事業の話を聞かせてください。本番にするのに何が要るか、何は後でいいか、何は別で考えるべきかを分けます。どこまでやれば本番か、ここで決めてしまいます。</p>
         </div>
       </li>
       <li class="flow-step fade-up">
         <span class="flow-step-num">2</span>
         <div class="flow-step-body">
-          <h3 class="flow-step-title">毎月、決めた分を前に進める</h3>
-          <p>認証、セキュリティ、運用の土台。本番に要るものを順に詰めていきます。その月にどこまでやるかを月初に決めて、月末に見てもらう。続けるかどうかも、その都度決められます。</p>
+          <h3 class="flow-step-title">毎月、決めた分を前に進めます</h3>
+          <p>認証、セキュリティ、運用の土台。本番に必要なものを順に詰めていきます。やることを先に決めて、進んだ分を見てもらいながら進めます。続けるかどうかも、その都度決められます。</p>
         </div>
       </li>
       <li class="flow-step fade-up">
         <span class="flow-step-num">3</span>
         <div class="flow-step-body">
-          <h3 class="flow-step-title">増えた要望は、順番を引き直す</h3>
-          <p>進めるうちに「あれもやりたい」は出てきます。歓迎です。ただ今月に詰め込むと全部が遅れるので、順番を組み直して入れます。量が増えてきたら、もっと深く入るプランに切り替える手もあります。</p>
+          <h3 class="flow-step-title">増えた要望は、順番を引き直します</h3>
+          <p>進めるうちに「あれもやりたい」は出てきます。歓迎です。ただ当月に詰め込むと全部が遅れるので、順番を組み直して入れます。量が増えてきたら、もっと深く入るプランに切り替える手もあります。</p>
         </div>
       </li>
     </ol>
 
     <div class="flow-note fade-up">
-      <p>約束するのは、完成ではなく毎月の前進です。本番にできるかどうかは、正直そちらの状況にもよります。だから結果そのものは保証しません。そのかわり、動いた分は確実に前に進めます。丸ごと任せて待つより、判断を一緒に持って進めてもらえると、いちばん早いです。</p>
+      <p>このプランで大事にするのは、毎月ちゃんと前に進むことです。本番に届くまでの期間は案件で変わるので、納期で区切る請負にはしておりません。そのかわり、前進の実感は得られるはずです。丸ごとお任せで待つより、判断を一緒に持って進める方が、より良い本番には早くたどり着くと信じております。</p>
     </div>
 
     <div class="flow-cta fade-up">
