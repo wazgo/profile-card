@@ -295,7 +295,7 @@ img {
 }
 
 .pricing-card.featured::after {
-  content: 'おすすめ';
+  content: '新メニュー';
   position: absolute;
   top: -0.625rem;
   right: 1.25rem;
@@ -313,6 +313,14 @@ img {
   font-size: 1rem;
   color: var(--text);
   align-self: center;
+}
+
+.plan-subcopy {
+  display: block;
+  margin-top: 0.25rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--ocean-deep);
 }
 
 .plan-price {
